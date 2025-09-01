@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Inversión Inteligente</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #0f0f0f; color:#00ff00; font-family:'Courier New', monospace; line-height:1.6; }
+    a { color:#00ff00; }
+    header, footer { border-bottom:1px solid #00ff00; padding:1rem; }
+    section { border-bottom:1px solid #00ff00; padding:1rem; }
+  </style>
+</head>
+<body class="px-6">
+  <header>
+    <h1 class="text-2xl font-bold">Inversión Inteligente - Acceso Privado</h1>
+    <p class="text-sm">Feed actualizado automáticamente</p>
+  </header>
+
+  <section id="feed-noticias">
+    <h2 class="text-xl font-bold text-green-400 mb-4">Noticias destacadas</h2>
+    <div id="rss-container"></div>
+  </section>
+
+  <section id="tip-dia">
+    <h2 class="text-xl font-bold text-green-400 mb-4">Tip del Día</h2>
+    <p class="text-green-100">Invertir con paciencia y revisar siempre los indicadores económicos antes de tomar decisiones.</p>
+  </section>
+
+  <footer class="mt-8 text-sm text-green-300">
+    © 2025 Inversión Inteligente - Contenido exclusivo para suscriptores.
+  </footer>
+
+  <script src="js/rss-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso Exclusivo - Inversión Inteligente</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #0f0f0f; color: #00ff00; font-family: 'Courier New', monospace; }
+    #typewriter::after { content: '|'; animation: blink 1s infinite; margin-left:2px; }
+    @keyframes blink { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+    #email-form input { background-color: #0f0f0f; color: #00ff00; border: 1px solid #00ff00; }
+    #email-form button { background-color: #00ff00; color: #0f0f0f; font-weight:bold; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen px-6">
+  <div id="subscription-container" class="max-w-xl w-full text-center">
+    <h1 class="text-3xl mb-6">ACCESO PRIVADO</h1>
+    <p id="typewriter" class="text-lg mb-8"></p>
+    <div id="email-form" class="hidden flex flex-col items-center gap-4">
+      <input type="email" id="email" placeholder="CORREO ELECTRÓNICO" class="w-full p-3 rounded-lg text-green-500" />
+      <button id="subscribe-btn" class="w-full py-3 rounded-lg hover:opacity-80">ACCEDER</button>
+    </div>
+  </div>
+  <script>
+    const messages=[
+      "INICIANDO SECUENCIA DE ACCESO...",
+      "VERIFICANDO CREDENCIALES DE INVERSIÓN...",
+      "ESTE SISTEMA ES EXCLUSIVO PARA SUSCRIPTORES PRIVILEGIADOS.",
+      "INTRODUCE TU CORREO PARA ACCEDER AL CONTENIDO SECRETO."
+    ];
+    const typewriterEl=document.getElementById('typewriter');
+    const emailForm=document.getElementById('email-form');
+    let messageIndex=0; let charIndex=0;
+    function typeMessage(){
+      if(charIndex<messages[messageIndex].length){
+        typewriterEl.textContent+=messages[messageIndex].charAt(charIndex);
+        charIndex++; setTimeout(typeMessage, Math.random()*70+30);
+      }else{
+        setTimeout(()=>{
+          typewriterEl.textContent=''; charIndex=0; messageIndex++;
+          if(messageIndex<messages.length){ typeMessage(); }
+          else{ typewriterEl.textContent='ACCESO RESTRINGIDO'; emailForm.classList.remove('hidden'); }
+        },800);
+      }
+    }
+    typeMessage();
+    document.getElementById('subscribe-btn').addEventListener('click',()=>{
+      const email=document.getElementById('email').value;
+      if(email){ window.location.href='contenido.html'; }
+      else{ alert('ERROR: Debes ingresar un correo válido.'); }
+    });
+  </script>
+</body>
+</html>
