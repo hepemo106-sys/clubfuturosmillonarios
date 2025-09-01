@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Futuros Millonarios - Dashboard Financiero</title>
+  <title>Club Futuros Millonarios - Noticias y Tips</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { background-color: #0f0f0f; color:#00ff00; font-family:'Courier New', monospace; line-height:1.6; }
     a { color:#00ff00; }
@@ -17,30 +16,27 @@
 
   <header>
     <h1 class="text-2xl font-bold">Club Futuros Millonarios - Acceso Privado</h1>
-    <p class="text-sm">Feed actualizado automáticamente y dashboard financiero</p>
+    <p class="text-sm">Noticias actualizadas automáticamente en español</p>
   </header>
 
+  <!-- Sección Noticias -->
   <section id="feed-noticias">
     <h2 class="text-xl font-bold text-green-400 mb-4">Noticias destacadas</h2>
     <div id="rss-container"></div>
   </section>
 
-  <section id="dashboard">
-    <h2 class="text-xl font-bold text-green-400 mb-4">Dashboard Financiero</h2>
-    <canvas id="realTimeChart" class="w-full h-64"></canvas>
-  </section>
-
+  <!-- Sección Tip del día -->
   <section id="tip-dia">
     <h2 class="text-xl font-bold text-green-400 mb-4">Tip del Día</h2>
     <p class="text-green-100">Invertir con paciencia y revisar siempre los indicadores económicos antes de tomar decisiones.</p>
   </section>
 
+  <!-- Footer -->
   <footer class="mt-8 text-sm text-green-300">
     © 2025 Club Futuros Millonarios - Contenido exclusivo para suscriptores.
   </footer>
-  
-  </script>
+
+  <!-- Script RSS -->
+  <script src="js/rss-loader.js"></script>
 </body>
 </html>
-
-
