@@ -38,49 +38,6 @@
   <footer class="mt-8 text-sm text-green-300">
     © 2025 Club Futuros Millonarios - Contenido exclusivo para suscriptores.
   </footer>
-
-  <script src="js/rss-loader.js"></script>
-  <script>
-    const ctx = document.getElementById('realTimeChart').getContext('2d');
-
-    const realTimeChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: [],
-        datasets: [{
-          label: 'Precio del índice (USD)',
-          data: [],
-          borderColor: '#00ff00',
-          backgroundColor: 'rgba(0,255,0,0.1)',
-          fill: true,
-          tension: 0.3
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { labels: { color: '#00ff00' } } },
-        scales: {
-          x: { ticks: { color: '#00ff00' } },
-          y: { ticks: { color: '#00ff00' } }
-        }
-      }
-    });
-
-    function updateChart() {
-      const now = new Date().toLocaleTimeString();
-      const newValue = Math.random() * 1000 + 30000; // Simulación
-
-      if(realTimeChart.data.labels.length > 20) {
-        realTimeChart.data.labels.shift();
-        realTimeChart.data.datasets[0].data.shift();
-      }
-
-      realTimeChart.data.labels.push(now);
-      realTimeChart.data.datasets[0].data.push(newValue);
-      realTimeChart.update();
-    }
-
-    setInterval(updateChart, 5000);
-  </script>
 </body>
 </html>
+
