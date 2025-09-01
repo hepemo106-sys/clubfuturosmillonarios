@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club Futuros Millonarios - Newsletter Financiera</title>
+  <title>Club Futuros Millonarios - Dashboard Financiero</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body { background-color: #0f0f0f; color:#00ff00; font-family:'Courier New', monospace; line-height:1.6; }
     a { color:#00ff00; }
@@ -13,8 +14,10 @@
   </style>
 </head>
 <body class="px-6">
+
   <header>
-  <h1 class="text-2xl font-bold">Club Futuros Millonarios - Acceso Privado</h1>
+    <h1 class="text-2xl font-bold">Club Futuros Millonarios - Acceso Privado</h1>
+    <p class="text-sm">Feed actualizado automáticamente y dashboard financiero</p>
   </header>
 
   <section id="feed-noticias">
@@ -22,17 +25,62 @@
     <div id="rss-container"></div>
   </section>
 
+  <section id="dashboard">
+    <h2 class="text-xl font-bold text-green-400 mb-4">Dashboard Financiero</h2>
+    <canvas id="realTimeChart" class="w-full h-64"></canvas>
+  </section>
+
   <section id="tip-dia">
     <h2 class="text-xl font-bold text-green-400 mb-4">Tip del Día</h2>
     <p class="text-green-100">Invertir con paciencia y revisar siempre los indicadores económicos antes de tomar decisiones.</p>
   </section>
 
-<footer class="mt-8 text-sm text-green-300">
-  © 2025 Club Futuros Millonarios - Contenido exclusivo para suscriptores.
-</footer>
+  <footer class="mt-8 text-sm text-green-300">
+    © 2025 Club Futuros Millonarios - Contenido exclusivo para suscriptores.
+  </footer>
 
   <script src="js/rss-loader.js"></script>
+  <script>
+    const ctx = document.getElementById('realTimeChart').getContext('2d');
+
+    const realTimeChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Precio del índice (USD)',
+          data: [],
+          borderColor: '#00ff00',
+          backgroundColor: 'rgba(0,255,0,0.1)',
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { labels: { color: '#00ff00' } } },
+        scales: {
+          x: { ticks: { color: '#00ff00' } },
+          y: { ticks: { color: '#00ff00' } }
+        }
+      }
+    });
+
+    function updateChart() {
+      const now = new Date().toLocaleTimeString();
+      const newValue = Math.random() * 1000 + 30000; // Simulación
+
+      if(realTimeChart.data.labels.length > 20) {
+        realTimeChart.data.labels.shift();
+        realTimeChart.data.datasets[0].data.shift();
+      }
+
+      realTimeChart.data.labels.push(now);
+      realTimeChart.data.datasets[0].data.push(newValue);
+      realTimeChart.update();
+    }
+
+    setInterval(updateChart, 5000);
+  </script>
 </body>
 </html>
-
-
