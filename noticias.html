@@ -2,27 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noticias - Club Futuros Millonarios</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/rss-loader.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="js/noticias-loader.js"></script>
 </head>
-<body class="terminal">
-  <header class="terminal-header">
-    <p>⟶ Módulo activo: Noticias financieras</p>
-  </header>
-  <div class="container">
-    <h1>📰 Noticias de Inversión y Economía</h1>
-    <div id="rss-container">
-      <article class="mb-6 border p-3">
-        <h3>Conexión establecida con fuentes económicas</h3>
-        <p>Las últimas noticias aparecerán aquí automáticamente...</p>
-      </article>
-    </div>
-
-    <nav class="menu">
-      <a href="contenido.html">🏠 Inicio</a>
-      <a href="recursos.html">📚 Recursos</a>
-    </nav>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>ClubFM</h2>
+      <nav>
+        <a href="contenido.html">Inicio</a>
+        <a href="noticias.html" class="active">Noticias</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="eventos.html">Eventos</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <h1>📰 Noticias de Inversión</h1>
+      <div id="noticias-container" class="card-grid">
+        <div class="card">Cargando noticias...</div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
