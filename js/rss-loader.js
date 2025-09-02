@@ -2,6 +2,7 @@ fetch('noticias.json')
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById('rss-container');
+    container.innerHTML = ""; // limpiamos placeholder
     data.forEach(noticia => {
       const article = document.createElement('article');
       article.className = 'mb-6 border p-3';
@@ -12,5 +13,5 @@ fetch('noticias.json')
       `;
       container.appendChild(article);
     });
-  });
-
+  })
+  .catch(err => console.error("Error cargando noticias:", err));
