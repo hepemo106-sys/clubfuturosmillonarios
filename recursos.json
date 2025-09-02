@@ -1,12 +1,24 @@
-[
-  {
-    "titulo": "Ebook - Estrategias de Inversión 2025",
-    "descripcion": "Un ebook exclusivo sobre oportunidades de inversión para este año.",
-    "link": "https://example.com/ebook1.pdf"
-  },
-  {
-    "titulo": "Artículo - Psicología del Inversor",
-    "descripcion": "Claves para mantener la calma en mercados volátiles.",
-    "link": "https://example.com/articulo1.pdf"
-  }
-]
+{
+  "recursos": [
+    {
+      "titulo": "Guía de Inversión en Bolsa 2025",
+      "descripcion": "Ebook completo con estrategias para invertir en acciones este año.",
+      "enlace": "https://www.example.com/ebook-bolsa.pdf"
+    },
+    {
+      "titulo": "Manual de Trading Cripto",
+      "descripcion": "Consejos prácticos para operar en el mercado de criptomonedas.",
+      "enlace": "https://www.example.com/trading-cripto.pdf"
+    },
+    {
+      "titulo": "Informe Macroeconómico Global",
+      "descripcion": "Análisis trimestral de las principales economías del mundo.",
+      "enlace": "https://www.example.com/informe-macro.pdf"
+    },
+    {
+      "titulo": "Cómo crear múltiples fuentes de ingreso",
+      "descripcion": "Artículo exclusivo sobre estrategias de generación de ingresos pasivos.",
+      "enlace": "https://www.example.com/ingresos-pasivos.pdf"
+    }
+  ]
+}
