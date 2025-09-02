@@ -1,12 +1,34 @@
-[
-  {
-    "titulo": "Nueva ola de inversiones en IA",
-    "resumen": "Los fondos internacionales apuestan fuerte por la inteligencia artificial en 2025.",
-    "link": "https://www.eleconomista.es/"
-  },
-  {
-    "titulo": "Mercados emergentes crecen un 12%",
-    "resumen": "América Latina y Asia presentan oportunidades de inversión únicas.",
-    "link": "https://www.expansion.com/"
-  }
-]
+{
+  "noticias": [
+    {
+      "titulo": "La Fed mantiene los tipos de interés",
+      "descripcion": "La Reserva Federal de EE.UU. ha decidido mantener los tipos de interés en su última reunión.",
+      "enlace": "https://www.example.com/fed"
+    },
+    {
+      "titulo": "Bitcoin supera los 70.000 USD",
+      "descripcion": "El mercado cripto vive un nuevo rally con Bitcoin alcanzando máximos históricos.",
+      "enlace": "https://www.example.com/bitcoin"
+    },
+    {
+      "titulo": "Europa presenta nuevo plan energético",
+      "descripcion": "La Comisión Europea anuncia un paquete de medidas para garantizar la seguridad energética.",
+      "enlace": "https://www.example.com/energia"
+    },
+    {
+      "titulo": "El oro alcanza su máximo en 10 años",
+      "descripcion": "Los inversores buscan refugio en el oro en medio de la incertidumbre económica global.",
+      "enlace": "https://www.example.com/oro"
+    },
+    {
+      "titulo": "Apple anuncia su entrada en el sector bancario",
+      "descripcion": "La compañía tecnológica lanzará un nuevo servicio de banca digital en 2025.",
+      "enlace": "https://www.example.com/apple-banca"
+    },
+    {
+      "titulo": "Mercado inmobiliario en auge en Latinoamérica",
+      "descripcion": "Ciudades como México DF y São Paulo lideran el crecimiento inmobiliario.",
+      "enlace": "https://www.example.com/inmobiliario"
+    }
+  ]
+}
