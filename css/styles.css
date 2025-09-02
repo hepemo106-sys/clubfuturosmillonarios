@@ -10,6 +10,13 @@ body.terminal {
   margin: auto;
 }
 
+.terminal-header {
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
 .menu {
   margin-top: 20px;
   border-top: 1px solid #00ff00;
@@ -24,4 +31,16 @@ body.terminal {
 
 .menu a:hover {
   text-decoration: underline;
+}
+
+input, button {
+  margin-top: 10px;
+  background: black;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 5px;
+}
+
+button:hover {
+  background: #003300;
 }
